@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #fff6d6);
+    color: #333;
+    text-align: center;
+}
+
+header {
+    padding: 20px 10px;
+}
+
+h1 {
+    color: #c9a227;
+    margin-bottom: 5px;
+}
+
+.location {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.clock {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.sun {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #ffd700, #ffcc00);
+    border-radius: 50%;
+    box-shadow: 0 0 120px rgba(255,215,0,0.6);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: top 1s linear;
+}
+
+.status-card {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.progress-container {
+    margin-top: 20px;
+    position: relative;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.bg-circle {
+    stroke: #eee;
+    stroke-width: 15;
+    fill: none;
+}
+
+.progress-circle {
+    stroke: #ffd700;
+    stroke-width: 15;
+    fill: none;
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    transition: stroke-dashoffset 0.8s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #c9a227;
+    white-space: pre-line;
+}
+
+.info-box {
+    background: #fff8dc;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+button {
+    background: #ffd700;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    margin: 40px 0;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* Mobiloptimalisering */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .progress-text {
+        font-size: 16px;
+    }
+
+    .sun {
+        width: 90px;
+        height: 90px;
+    }
+}
